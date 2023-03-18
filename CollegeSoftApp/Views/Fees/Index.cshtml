@@ -1,0 +1,167 @@
+﻿@model IEnumerable<CollegeSoftApp.Models.FeeDetailsView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyFeeAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearlyAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearlyDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Examfee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaidAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RemainingAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FeeStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrintCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CancelledDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CancelledUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CancelledBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResonForCancelled)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyFeeAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearlyAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearlyDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Examfee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntryUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntryBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaidAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemainingAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeeStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrintCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CancelledDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CancelledUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CancelledBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResonForCancelled)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
