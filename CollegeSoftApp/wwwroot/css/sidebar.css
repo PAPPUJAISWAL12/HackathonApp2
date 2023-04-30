@@ -1,0 +1,356 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav {
+    height: 50px;
+    top: 0;
+    margin-left: 4%;
+    position: sticky;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    transition: 0.5s;
+    background: linear-gradient(90deg, rgb(165, 149, 138), rgb(63, 53, 53) 21%, rgb(12, 9, 9) 38%, rgb(17, 7, 7) 100%);
+}
+
+.sidebar {
+    height: 100vh;
+    width: 70px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    transition: 0.5s;
+    z-index: 1;
+    overflow-x: hidden;
+    position: fixed;
+    background: linear-gradient(190deg, rgb(172, 154, 143), rgb(68, 49, 49) 21%, rgb(34, 27, 27) 38%, rgb(119, 110, 110) 100%);
+}
+
+
+.sidebar-content > .sidebar-logo {
+    color: white;
+    display: grid;
+    grid-column: auto;
+    margin: 10px;
+    justify-content: center;
+}
+
+.show {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.show-top-nav {
+    margin-left: 16%;
+}
+
+
+.sidebar-content > nav > ul > li > a {
+    display: grid;
+    grid-column: auto;
+    padding: 10px;
+    color: white;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 1px solid rgb(88, 87, 87);
+    margin: 10px 0px;
+}
+
+    .sidebar-content > nav > ul > li > a > span {
+        margin-left: 21px;
+        justify-content: space-around;
+    }
+
+    .sidebar-content > nav > ul > li > a > i {
+        font-size: 20px;
+        margin-left: 17px;
+    }
+
+    .sidebar-content > nav > ul > li > a:hover {
+        color: rgba(247, 154, 67);
+        border-bottom: 1px solid rgb(228, 216, 216);
+    }
+
+li:focus {
+    color: rgb(85, 238, 124);
+}
+
+
+
+.top-nav-icon {
+    background: transparent !important;
+    margin-left: 20px;
+    position: relative;
+}
+
+    .top-nav-icon > .fa-bars {
+        color: white;
+    }
+
+.fa-xmark {
+    color: rgb(85, 238, 124);
+}
+
+.active {
+    color: rgb(85, 238, 124) !important;
+    border-bottom: 1px solid rgb(228, 216, 216) !important;
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 92px !important;
+    transition: 0.5s;
+}
+
+.main-content-show {
+    margin-top: 50px;
+    padding: 10px;
+    transition: 0.5s;
+    margin-left: 253px !important;
+}
+
+.sidebar-logo a {
+    display: none;
+}
+
+@media(max-width:368px) {
+    .sidebar {
+        margin-left: -50%;
+        width: 70px !important;
+        transition: 0.5s;
+    }
+
+    .show {
+        left: 50% !important;
+    }
+
+    .main-content {
+        margin-top: 10px;
+        margin-left: 0% !important;
+    }
+
+    .main-content-show {
+        margin-left: 23% !important;
+    }
+
+    .top-nav {
+        margin-left: 0% !important;
+    }
+
+    .show-top-nav {
+        left: 16% !important;
+    }
+
+    .top-nav-icon {
+        left: 0% !important;
+        transition: 0.5s;
+    }
+
+    .top-nav-icon-show {
+        left: 15% !important;
+    }
+}
+
+@media(max-width:389px) and (min-width:369px) {
+    .top-nav-icon {
+        margin-left: 5% !important;
+        transition: 0.5s;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 15% !important;
+    }
+
+    .top-nav {
+        margin-left: 0% !important;
+    }
+
+    .sidebar {
+        width: 70px;
+        margin-left: -30% !important;
+    }
+
+    .show {
+        left: -6% !important;
+    }
+
+    .main-content {
+        margin-left: 0% !important;
+    }
+
+    .main-content-show {
+        margin-left: 15% !important;
+    }
+}
+
+@media (min-width:390px) and (max-width:600px) {
+    .top-nav-icon {
+        margin-left: 4% !important;
+        transition: 0.5s;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 14% !important;
+    }
+
+    .top-nav {
+        margin-left: 0% !important;
+    }
+
+    .sidebar {
+        width: 70px;
+        margin-left: -30% !important;
+    }
+
+    .show {
+        left: 30% !important;
+    }
+
+    .main-content {
+        margin-left: 0% !important;
+    }
+
+    .main-content-show {
+        margin-left: 15% !important;
+    }
+}
+
+@media(min-width:601px)and (max-width:703px) {
+    .top-nav {
+        margin-left: 5% !important;
+    }
+
+    .top-nav-icon {
+        margin-left: 35px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 20px;
+    }
+
+    .show-top-nav {
+        margin-left: 35% !important;
+    }
+}
+
+@media(min-width:704px) and (max-width:746px) {
+    .top-nav {
+        margin-left: 7%;
+    }
+
+    .top-nav-icon {
+        margin-left: 20px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 20px;
+    }
+
+    .show-top-nav {
+        margin-left: 33%;
+    }
+}
+
+@media(min-width:747px) and (max-width:817px) {
+    .top-nav {
+        margin-left: 7%;
+    }
+
+    .top-nav-icon {
+        margin-left: 30px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 20px;
+    }
+
+    .show-top-nav {
+        margin-left: 30%;
+    }
+}
+
+@media(min-width:818px)and (max-width:913px) {
+    .top-nav {
+        margin-left: 2%;
+    }
+
+    .top-nav-icon {
+        margin-left: 50px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 50px;
+    }
+
+    .show-top-nav {
+        margin-left: 23%;
+    }
+}
+
+@media(min-width:914px) and (max-width:1000px) {
+
+    .top-nav {
+        margin-left: 2%;
+    }
+
+    .top-nav-icon {
+        margin-left: 50px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 40px;
+    }
+
+    .show-top-nav {
+        margin-left: 23%;
+    }
+}
+
+@media(min-width:1001px) and (max-width:1086px) {
+    .top-nav {
+        margin-left: 2%;
+    }
+
+    .top-nav-icon {
+        margin-left: 50px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 40px;
+    }
+
+    .show-top-nav {
+        margin-left: 21%;
+    }
+}
+
+@media(min-width:1087px) and (max-width:1150px) {
+    .top-nav {
+        margin-left: 2%;
+    }
+
+    .top-nav-icon {
+        margin-left: 50px;
+    }
+
+    .top-nav-icon-show {
+        margin-left: 30px;
+    }
+
+    .show-top-nav {
+        margin-left: 21%;
+    }
+}
+
+.btn-edit {
+    background: rgb(85, 238, 124);
+}
+
+    .btn-edit:hover {
+        background: rgb(8, 238, 124);
+    }
+

@@ -1,0 +1,74 @@
+﻿@model CollegeSoftApp.Models.StudentView
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="card mt-3">
+    <div class="card-body">
+        <form method="get" asp-action="StudentList" asp-controller="Students" data-ajax="true" data-ajax-method="post" data-ajax-complete="GetStudentList">
+                    <div class="row">
+                        <div class="col-sm-2">Class Name:</div>
+                        <div class="col-sm-4">
+                            <select class="form-select" asp-for="Cid" asp-items="ViewBag.classList"></select>
+                        </div>
+                        <div class="col-sm-2 ">
+                            <div class="form-group">
+                                <input type="submit" value="Search" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+        </form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 ">
+        <div class="card m-3 p-2">
+            <div class="card-body">
+
+                <div class="text-center">
+                    <h3>StudentList</h3>
+                </div>
+                <a asp-action="Create" data-ajax="true" data-ajax-method="get" data-ajax-complete="GetCreatePage" data-bs-toggle="modal" data-bs-target="#CreateModal" class="btn btn-dark">Add New Student</a>
+                <div class="table-overflow">
+                    <table class="table table-bordered mt-3" id="data" align="center">
+                        <thead>
+                            <tr>
+                                <th>S.N</th>
+                             
+                                <th>FullName</th>
+                                <th>Class</th>
+                                <th>UserEmail</th>
+                                <th>UserAddress</th>
+                                <th>Phone</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="Content">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="CreateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modal-dialog-content">
+    </div>
+</div>
+<script>
+    $(window).on("load", function () {
+
+        $("input[type='submit']").click();
+    });
+    GetStudentList = function (xhr) {
+        document.getElementById("Content").innerHTML = xhr.responseText;
+    }
+    GetCreatePage = function (xhr) {
+        document.getElementById('modal-dialog-content').innerHTML = xhr.responseText;
+    }
+
+    $(document).ready(function () {
+        $("#data").DataTable();
+    });
+</script>

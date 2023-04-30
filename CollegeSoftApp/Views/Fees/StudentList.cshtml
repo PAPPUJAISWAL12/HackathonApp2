@@ -1,0 +1,63 @@
+﻿@model List<StudentView>
+<div>
+    <table class="table table-bordered mt-3" id="data" align="center">
+    <thead>
+        <tr>
+            <th>S.N</th>
+            <th>FullName</th>
+            <th>Class</th>
+            <th>UserEmail</th>
+            <th>UserAddress</th>
+            <th>Phone</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+    int count = 0;
+}
+@foreach (var item in Model) {
+        <tr>
+           <td>@(++count)</td>
+            
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+               
+            <a asp-action="Create" asp-controller="Fees" asp-route-id="@item.StdId" data-ajax="true" data-ajax-method="get" data-ajax-complete="GetCreatePage" data-bs-toggle="modal" data-bs-target="#CreateModal" class="btn btn-dark">PayFee</a>
+                
+               <a asp-action="Details" asp-controller="FeeDetails" asp-route-id="@item.StdId">FeeDetails</a>
+            </td>
+        </tr>
+}
+
+    </tbody>
+</table>
+</div>
+<div class="modal fade" id="CreateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modal-dialog-content">
+    </div>
+</div>
+<script>
+    GetCreatePage = function (xhr) {
+        document.getElementById("modal-dialog-content").innerHTML = xhr.responseText;
+    }
+      $(document).ready(function () {
+        $("#data").DataTable();
+    });
+</script>
+

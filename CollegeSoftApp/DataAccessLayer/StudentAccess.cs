@@ -4,10 +4,10 @@ using System.Text;
 
 namespace CollegeSoftApp.DataAccessLayer
 {
-    public static partial class StudentAccess
+    public static partial class DataAccess
     {
 
-        public static async Task<List<StudentView>?> GetStudent()
+        public static async Task<List<StudentView>?> GetStudentList()
         {
 
             List<StudentView>? students = new List<StudentView>();
@@ -28,27 +28,29 @@ namespace CollegeSoftApp.DataAccessLayer
 
         }
         //id
-        public static async Task<List<StudentView?>> GetStudent(int id)
+        public static async Task<StudentView?> GetStudentDetails(int id)
         {
-            List<StudentView>? students = new List<StudentView>();
+            StudentView? students = new StudentView();
             HttpClient client = new HttpClient();
             using (var response = await client.GetAsync("https://localhost:7027/api/Students/" + id.ToString()))
             {
                 string apiresponse = await response.Content.ReadAsStringAsync();
-                students = JsonConvert.DeserializeObject<List<StudentView>>(apiresponse);
+                students = JsonConvert.DeserializeObject<StudentView>(apiresponse);
             }
             return students;
         }
-        public static async Task<StudentView?> CreateStudent(Student student)
+
+        public static async Task<StudentEdit?> CreateStudent(StudentEdit student)
         {
-            StudentView? students = new StudentView();
+            StudentEdit? std = new StudentEdit();
             HttpClient client = new HttpClient();
             StringContent content = new StringContent(JsonConvert.SerializeObject(student), Encoding.UTF8, "application/json");
             using (var response = await client.PostAsync("https://localhost:7027/api/Students", content))
             {
                 string apiresponse = await response.Content.ReadAsStringAsync();
-            }
-            return students;
+				 std= JsonConvert.DeserializeObject<StudentEdit>(apiresponse);
+			}
+            return std;
         }
     }
 }

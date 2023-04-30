@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CollegeSoftApp.Models.ReceptionView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+    
+
+<div class="row">
+    <div class="col-sm-12 ">
+        <div class="card m-3 p-2">
+            <div class="card-body">
+
+                <div class="text-center">
+                    <h3>Reception List</h3>
+                </div>
+                <a asp-action="Create" data-ajax="true" data-ajax-method="get" data-ajax-complete="GetCreatePage" data-bs-toggle="modal" data-bs-target="#CreateModal" class="btn btn-dark">Add Record</a>
+                <a asp-action="CancelList" asp-controller="Receptions" >CancelLists</a>
+                <div class="table-overflow">
+                    <table class="table table-bordered mt-3" id="data" align="center">
+                        <thead>
+                            <tr>
+
+                                <th>PersonName</th>
+                                <th>EntryDate</th>
+                                <th>EntryTime</th>
+                                <th>Purpose</th>
+                                <th>PersonAddress</th>
+                                <th>Phone</th>
+                                <th>EntryBy</th>
+                                <th>FiscalYear</th>
+                               
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @if(item.CancelledUserId ==null){
+
+                                    <td>@item.PersonName</td>
+                                    <td>@item.EntryDate</td>
+                                    <td>@item.EntryTime</td>
+                                    <td>@item.Purpose</td>
+                                    <td>@item.PersonAddress</td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.EntryBy</td>
+                                    <td>@item.FiscalYear</td>
+                                   
+                                    <td>
+                                        <a asp-controller="Receptions"  asp-acrion="Details" asp-route-id="@item.Rid" data-ajax="true" data-ajax-method="Post" data-ajax-complete="GetCreatePage" data-bs-toggle="modal" data-bs-target="#CreateModal" class="btn btn-dark">Details</a>
+                                      @*  <a asp-controller="Receptions"  asp-acrion="Edit" asp-route-id="@item.Rid" data-ajax="true" data-ajax-method="Post" data-ajax-complete="GetCreatePage" data-bs-toggle="modal" data-bs-target="#CreateModal" class="btn btn-dark">Cancel</a>*@
+                                    </td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="CreateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modal-dialog-content">
+    </div>
+</div>
+
+<script>
+     GetCreatePage = function (xhr) {
+        document.getElementById('modal-dialog-content').innerHTML = xhr.responseText;
+    }
+    $(document).ready(function () {
+        $("#data").DataTable();
+    });
+</script>

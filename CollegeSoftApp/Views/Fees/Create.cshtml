@@ -1,0 +1,72 @@
+﻿@model CollegeSoftApp.Models.FeeEdit
+
+
+<form asp-action="Create">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Add Fee payment</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="MonthlyFeeAmt" class="control-label"></label>
+                <input asp-for="MonthlyFeeAmt" class="form-control" />
+                <span asp-validation-for="MonthlyFeeAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Examfee" class="control-label"></label>
+                <input asp-for="Examfee" class="form-control" />
+                <span asp-validation-for="Examfee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearlyAmt" class="control-label"></label>
+                <input asp-for="YearlyAmt" class="form-control" />
+                <span asp-validation-for="YearlyAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearlyDiscount" class="control-label"></label>
+                <input asp-for="YearlyDiscount" class="form-control" />
+                <span asp-validation-for="YearlyDiscount" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FiscalYear" class="control-label"></label>
+                <input asp-for="FiscalYear" class="form-control" />
+                <span asp-validation-for="FiscalYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <input asp-for="EntryUserId" class="form-control" />
+                <input asp-for="StdId" hidden />
+               
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalAmt" class="control-label"></label>
+                <input asp-for="TotalAmt" class="form-control" />
+                <span asp-validation-for="TotalAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaidAmt" class="control-label"></label>
+                <input asp-for="PaidAmt" class="form-control" />
+                <span asp-validation-for="PaidAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RemainingAmt" class="control-label"></label>
+                <input asp-for="RemainingAmt" class="form-control" />
+                <span asp-validation-for="RemainingAmt" class="text-danger"></span>
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+        <p>@ViewBag.message</p>
+    </div>
+</form>
+
+

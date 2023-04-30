@@ -5,6 +5,12 @@ namespace CollegeSoftApp.Models;
 
 public partial class ProgramInfo
 {
+    public virtual User? Cancelled { get; set; }
+
+    public virtual User User { get; set; } = null!;
+}
+public partial class ProgramInfoEdit
+{
     public int Pid { get; set; }
 
     public string Pname { get; set; } = null!;
@@ -25,13 +31,9 @@ public partial class ProgramInfo
 
     public DateTime EntryDate { get; set; }
 
-    public int CancelledId { get; set; }
+    public int? CancelledId { get; set; }
 
-    public DateTime CancelledDate { get; set; }
+    public DateTime? CancelledDate { get; set; }
 
-    public string ReasonForCancell { get; set; } = null!;
-
-    public virtual User Cancelled { get; set; } = null!;
-
-    public virtual User User { get; set; } = null!;
+    public string? ReasonForCancell { get; set; }
 }

@@ -5,49 +5,47 @@ namespace CollegeSoftApp.Models;
 
 public partial class FeeDetailsView
 {
-    public int DetailId { get; set; }
+	public int DetailId { get; set; }
 
-    public int FeeId { get; set; }
+	public int FeeId { get; set; }
 
-    public string FullName { get; set; } = null!;
+	public string FullName { get; set; } = null!;
 
-    public string Cname { get; set; } = null!;
+	public string Cname { get; set; } = null!;
 
-    public string UserEmail { get; set; } = null!;
+	public string UserEmail { get; set; } = null!;
 
-    public string UserAddress { get; set; } = null!;
+	public int StdId { get; set; }
 
-    public string Phone { get; set; } = null!;
+	public DateTime EntryDate { get; set; }
 
-    public decimal MonthlyFeeAmt { get; set; }
+	public string EntryTime { get; set; } = null!;
 
-    public decimal YearlyAmt { get; set; }
+	public string UserAddress { get; set; } = null!;
 
-    public decimal YearlyDiscount { get; set; }
+	public string Phone { get; set; } = null!;
 
-    public decimal Examfee { get; set; }
+	public decimal MonthlyFeeAmt { get; set; }
 
-    public string FiscalYear { get; set; } = null!;
+	public decimal YearlyAmt { get; set; }
 
-    public string? EntryUser { get; set; }
+	public decimal YearlyDiscount { get; set; }
 
-    public int? EntryBy { get; set; }
+	public decimal Examfee { get; set; }
 
-    public decimal TotalAmt { get; set; }
+	public string FiscalYear { get; set; } = null!;
 
-    public decimal PaidAmt { get; set; }
+	public string? EntryUser { get; set; }
 
-    public decimal RemainingAmt { get; set; }
+	public int? EntryBy { get; set; }
 
-    public string FeeStatus { get; set; } = null!;
+	public decimal TotalAmt { get; set; }
 
-    public int? PrintCount { get; set; }
+	public decimal PaidAmt { get; set; }
 
-    public DateTime CancelledDate { get; set; }
+	public decimal RemainingAmt { get; set; }
 
-    public string? CancelledUser { get; set; }
+	public string FeeStatus { get; set; } = null!;
 
-    public int? CancelledBy { get; set; }
-
-    public string ResonForCancelled { get; set; } = null!;
+	public int? PrintCount { get; set; }
 }

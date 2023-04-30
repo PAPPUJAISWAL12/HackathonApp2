@@ -15,9 +15,8 @@ public partial class FeeDetail
 
     public decimal RemainingAmt { get; set; }
 
-    public string FeeStatus { get; set; } = null!;
+    public string FeeStatus { get; set; } 
 
-    public virtual Fee Fee { get; set; } = null!;
-
+    public virtual Fee Fee { get; set; } 
     public virtual ICollection<FeePrint> FeePrints { get; } = new List<FeePrint>();
 }

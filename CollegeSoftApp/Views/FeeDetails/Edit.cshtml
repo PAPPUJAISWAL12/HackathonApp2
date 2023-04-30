@@ -1,0 +1,34 @@
+﻿@model CollegeSoftApp.Models.FeeDetail
+
+
+        <form asp-action="Edit">
+            <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Add New Class</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div>
+                            Are u sure go to next column
+                        </div>
+                    <div class="form-group">                        
+                        <input asp-for="FeeStatus" value="Due" hidden class="form-control" />
+                       
+                    </div>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+
+
+        </form>
+   
+

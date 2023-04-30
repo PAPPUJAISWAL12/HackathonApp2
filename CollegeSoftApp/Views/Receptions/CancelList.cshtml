@@ -1,0 +1,110 @@
+﻿@model IEnumerable<CollegeSoftApp.Models.ReceptionView>
+
+@{
+    ViewData["Title"] = "CancelList";
+}
+
+<h1>CancelList</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.PersonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purpose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CancelledDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CancelledUserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CancelledBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiscalYear)
+            </th>
+        
+           
+            <th>
+                @Html.DisplayNameFor(model => model.ResonForCancell)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntryTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purpose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntryBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CancelledDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CancelledUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CancelledBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiscalYear)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.ResonForCancell)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

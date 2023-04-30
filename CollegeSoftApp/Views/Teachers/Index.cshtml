@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CollegeSoftApp.Models.TeacherView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>TeacherList</h1>
+<p>
+    <a asp-action="Create" class="btn btn-dark">Create New</a>
+</p>
+<table class="table" id="data">
+    <thead>
+        <tr>
+            <th>
+              S.N
+            </th>
+           
+           <th>Post</th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmail)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.UserAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int count = 0;
+        }
+        @foreach (var item in Model) {
+        <tr>
+           
+           <td>@(++count)</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tpost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+          
+           
+        </tr>
+}
+    </tbody>
+</table>
+<script>
+    $(document).ready(function () {
+        $("#data").DataTable();
+    });
+</script>

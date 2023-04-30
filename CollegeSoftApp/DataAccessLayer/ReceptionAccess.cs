@@ -12,7 +12,7 @@ namespace CollegeSoftApp.DataAccessLayer
             try
             {
                 HttpClient client = new HttpClient();
-                using (var response = await client.GetAsync("https://localhost:7027/api/Reception"))
+                using (var response = await client.GetAsync("https://localhost:7027/api/Receptions"))
                 {
                     string apiresponse = await response.Content.ReadAsStringAsync();
                     receptions = JsonConvert.DeserializeObject<List<ReceptionView>>(apiresponse);
@@ -41,10 +41,11 @@ namespace CollegeSoftApp.DataAccessLayer
                 ReceptionEdit? receptionView = new ReceptionEdit();
                 HttpClient client = new HttpClient();
                 StringContent content = new StringContent(JsonConvert.SerializeObject(reception), Encoding.UTF8, "application/json");
-                using (var response = await client.PostAsync("https://localhost:7027/api/Reception", content))
+                using (var response = await client.PostAsync("https://localhost:7027/api/Receptions", content))
                 {
                     string apiresponse = await response.Content.ReadAsStringAsync();
-                }
+				    receptionView = JsonConvert.DeserializeObject<ReceptionEdit>(apiresponse);
+			    }
                 return receptionView;
             }
         }

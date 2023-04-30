@@ -240,3 +240,9 @@ H:\visual studio\CollegeSoftApp\CollegeSoftApp\obj\Debug\net6.0\refint\CollegeSo
 H:\visual studio\CollegeSoftApp\CollegeSoftApp\obj\Debug\net6.0\CollegeSoftApp.pdb
 H:\visual studio\CollegeSoftApp\CollegeSoftApp\obj\Debug\net6.0\CollegeSoftApp.genruntimeconfig.cache
 H:\visual studio\CollegeSoftApp\CollegeSoftApp\obj\Debug\net6.0\ref\CollegeSoftApp.dll
+H:\visual studio\CollegeSoftApp\CollegeSoftApp\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+H:\visual studio\CollegeSoftApp\CollegeSoftApp\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+H:\visual studio\CollegeSoftApp\CollegeSoftApp\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+H:\visual studio\CollegeSoftApp\CollegeSoftApp\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+H:\visual studio\CollegeSoftApp\CollegeSoftApp\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+H:\visual studio\CollegeSoftApp\CollegeSoftApp\bin\Debug\net6.0\Twilio.dll

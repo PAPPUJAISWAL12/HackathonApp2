@@ -5,55 +5,49 @@ namespace CollegeSoftApp.Models;
 
 public partial class FeePrintView
 {
-    public int PrintId { get; set; }
+	public int PrintId { get; set; }
 
-    public DateTime PrintDate { get; set; }
+	public DateTime PrintDate { get; set; }
 
-    public string PrintTime { get; set; } = null!;
+	public string PrintTime { get; set; } = null!;
 
-    public int PrintUserId { get; set; }
+	public int PrintUserId { get; set; }
 
-    public int DetailId { get; set; }
+	public string? PrintUser { get; set; }
 
-    public string FullName { get; set; } = null!;
+	public int DetailId { get; set; }
 
-    public string Cname { get; set; } = null!;
+	public string FullName { get; set; } = null!;
 
-    public string UserEmail { get; set; } = null!;
+	public string Cname { get; set; } = null!;
 
-    public string UserAddress { get; set; } = null!;
+	public string UserEmail { get; set; } = null!;
 
-    public string Phone { get; set; } = null!;
+	public string UserAddress { get; set; } = null!;
 
-    public decimal MonthlyFeeAmt { get; set; }
+	public string Phone { get; set; } = null!;
 
-    public decimal YearlyAmt { get; set; }
+	public decimal MonthlyFeeAmt { get; set; }
 
-    public decimal YearlyDiscount { get; set; }
+	public decimal YearlyAmt { get; set; }
 
-    public decimal Examfee { get; set; }
+	public decimal YearlyDiscount { get; set; }
 
-    public string FiscalYear { get; set; } = null!;
+	public decimal Examfee { get; set; }
 
-    public string? EntryUser { get; set; }
+	public string FiscalYear { get; set; } = null!;
 
-    public int? EntryBy { get; set; }
+	public string? EntryUser { get; set; }
 
-    public decimal TotalAmt { get; set; }
+	public int? EntryBy { get; set; }
 
-    public decimal PaidAmt { get; set; }
+	public decimal TotalAmt { get; set; }
 
-    public decimal RemainingAmt { get; set; }
+	public decimal PaidAmt { get; set; }
 
-    public string FeeStatus { get; set; } = null!;
+	public decimal RemainingAmt { get; set; }
 
-    public int? PrintCount { get; set; }
+	public string FeeStatus { get; set; } = null!;
 
-    public int? CancelledBy { get; set; }
-
-    public DateTime CancelledDate { get; set; }
-
-    public string? CancelledUser { get; set; }
-
-    public string ResonForCancelled { get; set; } = null!;
+	public int? PrintCount { get; set; }
 }

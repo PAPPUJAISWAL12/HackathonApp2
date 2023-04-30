@@ -1,0 +1,106 @@
+﻿@model CollegeSoftApp.Models.ReceptionView
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Rid)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Rid)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PersonName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PersonName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EntryDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EntryDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EntryTime)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EntryTime)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Purpose)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Purpose)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PersonAddress)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PersonAddress)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EntryBy)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EntryBy)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CancelledDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CancelledDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CancelledUserId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CancelledUserId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CancelledBy)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CancelledBy)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FiscalYear)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FiscalYear)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ReceptionStatus)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ReceptionStatus)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ResonForCancell)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ResonForCancell)
+            </dd>
+        </dl>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      
+    </div>
+</div>

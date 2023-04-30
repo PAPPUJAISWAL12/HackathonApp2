@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CollegeSoftApp.DataAccessLayer
 {
-    public static partial class TeacherAccess
+    public static partial class DataAccess
     {
-        public static async Task<List<TeacherView>?> GetTeacher()
+        public static async Task<List<TeacherView>?> GetTeacherList()
         {
 
             List<TeacherView>? teachers = new List<TeacherView>();
@@ -38,9 +38,9 @@ namespace CollegeSoftApp.DataAccessLayer
             }
             return teachers;
         }
-        public static async Task<TeacherView?> CreateTecaher(Teacher teacher)
+        public static async Task<TeacherEdit?> CreateTecaher(TeacherEdit teacher)
         {
-            TeacherView? teachers = new TeacherView();
+            TeacherEdit? teachers = new TeacherEdit();
             HttpClient client = new HttpClient();
             StringContent content = new StringContent(JsonConvert.SerializeObject(teacher), Encoding.UTF8, "application/json");
             using (var response = await client.PostAsync("https://localhost:7027/api/Teachers", content))

@@ -16,18 +16,14 @@
 
 		public string? FiscalYear { get; set; }
 
-		public int EntryBy { get; set; }
+		public int EntryUserId { get; set; }
 
 		public DateTime EntryDate { get; set; }
 
-		public string? EntryTime { get; set; } 
-
-		public DateTime CancelledDate { get; set; }
-
-		public int? CancelledBy { get; set; }
+		public string? EntryTime { get; set; }
 
 
-		public int DetailId { get; set; }		
+		public int DetailId { get; set; }
 
 		public decimal TotalAmt { get; set; }
 
@@ -35,19 +31,12 @@
 
 		public decimal RemainingAmt { get; set; }
 
-		public string? FeeStatus { get; set; }
-
-
 		public int PrintId { get; set; }
 
 		public DateTime PrintDate { get; set; }
 
-		public string? PrintTime { get; set; } 
+		public string? PrintTime { get; set; }
 
 		public int PrintUserId { get; set; }
-
-		
-
-
 	}
 }

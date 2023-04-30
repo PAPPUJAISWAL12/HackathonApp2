@@ -1,0 +1,31 @@
+﻿@model List<StudentView>
+
+@{
+    int count = 0;
+}
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@(++count)</td>
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+       
+    </tr>
+}
+
+

@@ -20,4 +20,6 @@ public partial class StudentView
     public string UserAddress { get; set; } = null!;
 
     public string Phone { get; set; } = null!;
+
+	public  List<Fee> Fees { get; set; } = new List<Fee>();
 }

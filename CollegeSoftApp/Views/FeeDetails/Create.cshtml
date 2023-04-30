@@ -1,0 +1,57 @@
+﻿@model CollegeSoftApp.Models.FeeDetailEdit
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>FeeDetail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">               
+                <input asp-for="FeeId" hidden class="form-control" />
+               
+                <input asp-for="EntryDate" hidden  />
+                <input asp-for="EntryTime" hidden />
+                <input asp-for="EntryUserId" hidden />
+                <input asp-for="TotalAmt" value="@ViewBag.TotalAmt" hidden readOnly class="form-control" />
+                <label>Net Ammount:</label>
+                <input value="@ViewBag.FeeRemainingAmmount" readonly id="netAmt" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="PaidAmt" class="control-label"></label>
+                <input asp-for="PaidAmt"  id="paid" class="form-control" />
+                <span asp-validation-for="PaidAmt" class="text-danger"></span>
+            </div>
+            <div class="form-group">                
+                <input asp-for="RemainingAmt" readonly id="result" />              
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+   
+</div>
+ <script>
+     $(document).ready(function(){
+        $("#paid").keyup(function () {
+            var input1 = parseFloat($("#netAmt").val());
+            var input2 = parseFloat($("#paid").val());
+            var r=parseFloat($("#result").val());
+      var result = input1 - input2;
+
+            $("#result").val(result)
+    
+   });
+});
+   
+ </script>
+
+

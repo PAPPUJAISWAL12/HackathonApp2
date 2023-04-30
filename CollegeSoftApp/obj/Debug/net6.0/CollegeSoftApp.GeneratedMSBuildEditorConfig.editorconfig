@@ -15,16 +15,76 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = H:\visual studio\CollegeSoftApp\CollegeSoftApp
 build_property._RazorSourceGeneratorDebug = 
 
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Classes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Classes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3Nlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/FeeDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlRGV0YWlsc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/FeeDetails/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlRGV0YWlsc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/FeeDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlRGV0YWlsc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/FeePrints/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlUHJpbnRzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Fees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Fees/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Fees/StudentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlc1xTdHVkZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Homes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/ProgramInfoes/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUluZm9lc1xjcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/ProgramInfoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUluZm9lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/ProgramInfoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUluZm9lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Receptions/CancelList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0aW9uc1xDYW5jZWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Receptions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0aW9uc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Receptions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0aW9uc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Receptions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0aW9uc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Receptions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Shared/Error.cshtml]
@@ -33,6 +93,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Students/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Students/StudentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcU3R1ZGVudExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Teachers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/Teachers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [H:/visual studio/CollegeSoftApp/CollegeSoftApp/Views/_ViewImports.cshtml]

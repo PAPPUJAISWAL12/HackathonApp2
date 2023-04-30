@@ -9,7 +9,7 @@ public partial class FeePrint
 
     public DateTime PrintDate { get; set; }
 
-    public string PrintTime { get; set; } = null!;
+    public string PrintTime { get; set; } 
 
     public int PrintUserId { get; set; }
 

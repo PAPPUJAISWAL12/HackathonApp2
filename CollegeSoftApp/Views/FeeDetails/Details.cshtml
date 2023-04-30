@@ -1,0 +1,101 @@
+﻿@model List<CollegeSoftApp.Models.FeeDetailsView>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-sm-12 ">
+        <div class="card m-3 p-2">
+            <div class="card-body">                
+                <div class="table-overflow">
+                    <table>
+                       <tr>
+                           <th>Student Name</th>
+                           <td>:</td>
+                            
+                           <td>@ViewBag.Fname</td>
+                       </tr>
+                       <tr>
+                           <th>Class</th>
+                           <td>:</td>
+                          
+                           <td>@ViewBag.Cl</td>
+                       </tr>
+                       <tr>
+                           <th>Yearly Fee</th>
+                           <td>:</td>
+                      
+                           <td>@ViewBag.YearAmt</td>
+                       </tr>
+                    </table>
+                    <table class="table table-bordered mt-3" id="myTable" align="center">
+                        <thead>
+                            <tr>
+                                <th>S.N</th>
+                                <th>Date</th>
+                                <th>PaidAmt</th>
+                                <th>RemainingAmt</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="Content">
+
+                            @{
+                                int count = 0;
+                            }
+                           @foreach (var item in Model)
+                           {
+                              <tr>                                 
+                                    <td>@(++count)</td>  
+                                    <td>@item.EntryDate.ToShortDateString()</td>
+                                    <td id="amount">@item.PaidAmt</td>
+                                    <td>@item.RemainingAmt</td>
+                                   
+                                    <td>
+                                        @if(item.FeeStatus ==null){
+                                             <a asp-action="Create" asp-controller="FeeDetails" asp-route-id="@item.DetailId" class="btn btn-dark">PayFee</a>
+                                        }                                                                     
+                                    </td>
+                              </tr>
+                           }
+                           <tr>
+                               <td id="tamount">Total Amount:@ViewBag.totalamt</td>
+                               <td></td>
+                              @* <td id="totalAmount">                                    
+                               </td>*@
+                               <td id="paidamt"> @ViewBag.paidAmount</td>
+                               <td id="ramt"></td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="CreateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="modal-dialog-content">
+    </div>
+</div>
+<script>
+    GetCreatePage = function (xhr) {
+        document.getElementById('modal-dialog-content').innerHTML = xhr.responseText;
+    }
+   
+      $(window).on("load", function () {
+        GetTotal()
+      });
+      function GetTotal(){      
+        
+        var total = 0;
+        $('#amount').each(function() {
+            
+          total =total+ parseFloat($(this).html()); 
+         });
+        $('#totalAmount').html(total.toString());
+
+      }
+  
+</script>
+   

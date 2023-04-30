@@ -1,0 +1,137 @@
+﻿@model CollegeSoftApp.Models.FeePrintView
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+ <style>
+    td{
+       padding-left:10px;
+       padding-top:5px;
+    }
+
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card{
+        width:700px;
+        margin:auto;
+    }
+    .container{
+        margin-top:auto;
+        margin-left:auto;
+    }
+   .center th{
+        padding:8px;
+        margin:10px;
+    }
+    @@media print {
+    header, aside, .btn-print,footer {
+        display: none;
+    }
+    @@page {
+            margin-top: 10px;
+            size: A4;
+        }
+    }
+
+ </style>
+
+<div class="container-fluid card  p-3">
+   <div class="CafeData text-center" >
+       <h2><b>College Name</b></h2>
+       <p>Itahari</p>
+       <p></p>
+   </div>
+   <div class="row mt-4">
+       <div class="col-sm-1"></div>
+       <div class="col-sm-6 ">
+             
+                <table>
+                <tr>
+                    <th>Name</th>
+                       <td>:</td>
+                       <td>@Model.FullName</td>
+                </tr>
+                    <tr>
+                        <th>Address:</th>
+                        <td>:</td>
+                        <td>@Model.UserAddress</td>
+                    </tr>
+                    <tr>
+                        <th>Pan No</th>
+                         <td>:</td>
+                        <td>@Model.Phone</td>
+                    </tr>
+                </table>
+                
+           
+       </div>
+       <div class="col-sm-5">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <td>:</td>
+                    <td>@Model.PrintDate.ToShortDateString() @Model.PrintTime</td>
+                </tr>
+                <tr>
+                    <th>Bill No</th>
+                    <td>:</td>
+                    <td>@Model.PrintId</td>
+                </tr>
+            </table>
+       </div>       
+   </div>
+   <div class="center mt-5">
+       <table class="table-bordered " border="1">
+           <thead>
+               <tr>
+                    <th>Monthly Fee</th>
+                    <th>Yearly Fee</th>
+                    <th>Exam Fee</th>
+                    <th>Yearly Discount</th>
+                    <th>Paid Ammount</th>
+                    <th>Remaining Ammount</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>@Model.MonthlyFeeAmt</td>
+                   <td>@Model.YearlyAmt</td>
+                   <td>@Model.Examfee</td>
+                   <td>@Model.YearlyDiscount</td>
+                   <td>@Model.PaidAmt</td>
+                   <td>@Model.RemainingAmt</td>
+               </tr>
+           </tbody>
+       </table>
+   </div>
+   <div class="row mt-5">
+       <div class="col-sm-8"></div>
+       <div class="col-sm-4">
+            <table>
+                <tr>
+                    <th>Printed By</th>
+                    <td>:</td>
+                    <td>@Model.PrintUser</td>
+                </tr>
+                
+            </table>
+           
+       </div>
+   </div>
+</div>
+<script>
+    window.addEventListener('load',function(){
+        window.print();
+        $("input[value=Cancel]").attr('value', "Go Back");
+        //document.location.href = "/SupplierPayments/Index";
+    });
+    var cancel=document.getElementsByClassName("cancel-button");
+    cancel.addEventListener('click',function(){
+        window.location.href = "/SupplierPayments/Index";
+    });
+</script>
+<h1>Details</h1>
+
